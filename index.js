@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    6to5 = require('gulp-6to5'),
+    to5 = require('gulp-6to5'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     _ = require('underscore'),
@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     utilities = require('laravel-elixir/ingredients/commands/Utilities'),
     notification = require('laravel-elixir/ingredients/commands/Notification');
 
-elixir.extend('6to5', function (src, outputDir, options) {
+elixir.extend('to5', function (src, options) {
 
     var config = this,
         defaultOptions = {
@@ -19,7 +19,7 @@ elixir.extend('6to5', function (src, outputDir, options) {
     options = _.extend(defaultOptions, options);
     src = "./" + utilities.buildGulpSrc(src, options.srcDir);
 
-    gulp.task('6to5', function () {
+    gulp.task('to5', function () {
 
         var onError = function(e) {
             new notification().error(e, '6to5 Failed!');
@@ -27,14 +27,14 @@ elixir.extend('6to5', function (src, outputDir, options) {
         };
 
         return gulp.src(src)
-            .pipe(6to5(options)).on('error', onError)
+            .pipe(to5(options)).on('error', onError)
             .pipe(gulpIf(! options.debug, uglify()))
             .pipe(gulp.dest(options.output))
             .pipe(new notification().message('6to5 Compiled!'));
     });
 
-    this.registerWatcher('6to5', options.srcDir + '/**/*.js');
+    this.registerWatcher('to5', options.srcDir + '/**/*.js');
 
-    return this.queueTask('6to5');
+    return this.queueTask('to5');
 
 });
