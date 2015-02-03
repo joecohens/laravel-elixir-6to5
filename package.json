@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-6to5",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Laravel Elixir 6to5 Extension",
   "main": "index.js",
   "scripts": {

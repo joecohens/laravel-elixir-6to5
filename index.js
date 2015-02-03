@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     to5 = require('gulp-6to5'),
-    gulpif = require('gulp-if'),
+    gulpIf = require('gulp-if'),
     uglify = require('gulp-uglify'),
     _ = require('underscore'),
     elixir = require('laravel-elixir'),
