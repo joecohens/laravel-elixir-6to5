@@ -1,4 +1,4 @@
-##DEPRECATED: Please use the new [Babel][https://www.npmjs.com/package/laravel-elixir-babel] implementation.
+##DEPRECATED: Please use the new [Babel](https://www.npmjs.com/package/laravel-elixir-babel) implementation.
 
 # laravel-elixir-6to5
 
