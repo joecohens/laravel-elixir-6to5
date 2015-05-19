@@ -1,3 +1,5 @@
+##DEPRECATED: Please use the new [Babel][https://www.npmjs.com/package/laravel-elixir-babel] implementation.
+
 # laravel-elixir-6to5
 
 Simple extension to *laravel elixir* to build javascript bundle with *6to5*.
