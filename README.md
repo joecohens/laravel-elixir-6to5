@@ -1,4 +1,4 @@
-##DEPRECATED: Please use the new [Babel](https://www.npmjs.com/package/laravel-elixir-babel) implementation.
+##DEPRECATED: Babel is now included on elixir by default.
 
 # laravel-elixir-6to5
 
